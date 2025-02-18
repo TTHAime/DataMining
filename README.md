@@ -22,17 +22,18 @@ Python 3.12.9
 # in cmd
 pip install fastapi uvicorn tensorflow numpy pandas psycopg2-binary prisma
 
-setup DataBase
+##setup DataBase
 - prisma init
 create Datamining Database in pgAdmin
 prisma migrate dev --name migratename
 
-in env
+#in env
 DATABASE_URL="postgresql://username:password@localhost:5432/Datamining?schema=public"
 
+----------------------------
 running backend
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
-
+----------------------------
 running frontend
 - npm run dev
 - เข้าไปที่ http://localhost:3000
