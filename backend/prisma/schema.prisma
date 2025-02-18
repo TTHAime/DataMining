@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-py"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Prediction {
+  id          Int      @id @default(autoincrement())
+  age         Int
+  gender      Int
+  cholesterol Float
+  blood_pressure Float
+  glucose       Float
+  bmi           Float
+  smoking       Int
+  alcohol       Int
+  physical_activity Int
+  family_history Int
+  diet          Int
+  sleep_hours   Float
+  stress_level  Int
+  medication    Int
+  heart_rate    Int
+  systolic_bp   Float
+  diastolic_bp  Float
+  waist_size    Float
+  prediction  Float
+  created_at  DateTime @default(now())
+}
